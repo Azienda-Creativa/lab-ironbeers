@@ -1,19 +1,24 @@
-<div class='card mb-3' style='max-width: 540px;'>
+<div class='card mb-3' style='max-width: 80%; border-style:none; border-width:0px;' >
   <div class='row g-0'>
     <div class='col-md-4'>
       <img
         src='{{image_url}}'
         class='img-fluid rounded-start'
-        style='max-width:  20% ; height: auto; margin:40px'
+        style='max-width:  25% ; height: auto; float:right'
       />
     </div>
     <div class='col-md-8'>
-      <div class='card-body'>
-        <h5 class='card-title'>{{name}}</h5>
+      <div class='card-body'  style="border-style:none; border-width:0px;">
+        <h3 class='card-title'>{{name}}</h3>
         <p class='card-text'>{{tagline}}</p>
         <p class='card-text'>{{description}}</p>
-        <p class='card-text'>{{food_pairing}}</p>
-        <p class='card-text'>{{brewers_tips}}</p>
+        <h5 class='card-text'>Food Pairing</h5>
+        <ul>
+        {{#each food_pairing}}
+      <li>   {{this}}</li>
+        {{/each}}
+         </ul>
+        <p class='card-text'><h4>Brewers Tips: </h4>  {{brewers_tips}}</p>
       </div>
     </div>
   </div>
